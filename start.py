@@ -1,52 +1,56 @@
-# TensorFlow and tf.keras
-import tensorflow as tf
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.onnx
+import onnxruntime
 
-# Helper libraries
-import numpy as np
-import matplotlib.pyplot as plt
+# 1. 训练一个简单的模型
 
-gpus = tf.config.experimental.list_physical_devices('GPU')
-if gpus:
-    # 如果想只使用第0个GPU
-    tf.config.experimental.set_visible_devices(gpus[0], 'GPU')
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super(SimpleModel, self).__init__()
+        self.fc = nn.Linear(1, 1)  # 一个简单的线性层
 
-print(tf.__version__)
-fashion_mnist = tf.keras.datasets.fashion_mnist
+    def forward(self, x):
+        return self.fc(x)
 
-(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+# 生成一些模拟数据
+x_train = torch.randn(100, 1) * 10
+y_train = 3 * x_train + 5 + torch.randn(100, 1) * 10  # y = 3x + 5 + noise
 
+# 创建模型、损失函数和优化器
+model = SimpleModel()
+criterion = nn.MSELoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
 
-class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
-               'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
-print(train_images.shape)
-plt.figure()
-plt.imshow(train_images[0])
-plt.colorbar()
-plt.grid(False)
-plt.savefig('image.png')  # 保存图像到本地文件 image.png
+# 训练模型
+for epoch in range(100):
+    model.train()
+    optimizer.zero_grad()
+    output = model(x_train)
+    loss = criterion(output, y_train)
+    loss.backward()
+    optimizer.step()
+    if epoch % 10 == 0:
+        print(f'Epoch {epoch}, Loss: {loss.item()}')
 
+# 2. 保存模型为 ONNX 格式
 
-train_images = train_images / 255.0
+# 定义一个模拟输入
+x = torch.randn(1, 1)
 
-test_images = test_images / 255.0
+# 导出模型到 ONNX 格式
+torch.onnx.export(model, x, "model.onnx")
 
-plt.figure(figsize=(10,10))
-for i in range(25):
-    plt.subplot(5,5,i+1)
-    plt.xticks([])
-    plt.yticks([])
-    plt.grid(False)
-    plt.imshow(train_images[i], cmap=plt.cm.binary)
-#    plt.xlabel(class_names[train_labels[i]])
-plt.savefig('image.png')
+# 3. 推理 ONNX 模型
 
-model = tf.keras.Sequential([
-    tf.keras.layers.Flatten(input_shape=(28, 28)),
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(10)
-])
-model.compile(optimizer='adam',
-              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-              metrics=['accuracy'])
+# 加载 ONNX 模型
+ort_session = onnxruntime.InferenceSession("model.onnx")
 
-model.fit(train_images, train_labels, epochs=10)
+# 定义输入数据
+x_test = torch.randn(1, 1).numpy()
+
+# 进行推理
+ort_inputs = {ort_session.get_inputs()[0].name: x_test}
+ort_outs = ort_session.run(None, ort_inputs)
+print(ort_outs[0])
