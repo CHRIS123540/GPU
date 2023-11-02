@@ -31,7 +31,7 @@ for epoch in range(2000):
     optimizer.step()
     if epoch % 10 == 0:
         print(f'Epoch {epoch}, Loss: {loss.item()}')
-
+#
 # 2. 保存模型为 ONNX 格式
 # 定义一个模拟输入
 x = torch.randn(1, 1)
