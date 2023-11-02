@@ -6,6 +6,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 from PIL import Image
+import os
 
 def load_mnist_images(filename):
     with open(filename, 'rb') as f:
@@ -35,31 +36,28 @@ test_dataset = process_data('/home/hlx/work/GPU/src/data/MNIST/raw/t10k-images-i
 train_dataloader = DataLoader(train_dataset, batch_size=100, shuffle=True)
 test_dataloader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
 
-class CNN(nn.Module):
+class SimpleNN(nn.Module):
     def __init__(self):
-        super(CNN, self).__init__()
-        self.conv1 = nn.Conv2d(1, 32, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=3)
-        self.fc1 = nn.Linear(6*6*64, 128)
+        super(SimpleNN, self).__init__()
+        self.flatten = nn.Flatten()
+        self.fc1 = nn.Linear(28*28, 128)
         self.fc2 = nn.Linear(128, 10)
 
     def forward(self, x):
-        x = F.relu(F.max_pool2d(self.conv1(x), 2))
-        x = F.relu(F.max_pool2d(self.conv2(x), 2))
-        x = x.view(-1, 6*6*64)
+        x = self.flatten(x)
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
         return F.log_softmax(x, dim=1)
 
-model = CNN().to(device)
+model = SimpleNN().to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Training the model
-for epoch in range(50):
+for epoch in range(10):  # reduce epoch to 10 for quicker training
     model.train()
     for data, target in train_dataloader:
-        data = data.view(-1, 1, 28, 28).to(device)
+        data = data.to(device)
         target = target.to(device)
         optimizer.zero_grad()
         output = model(data)
@@ -74,7 +72,7 @@ test_loss = 0
 correct = 0
 with torch.no_grad():
     for data, target in test_dataloader:
-        data = data.view(-1, 1, 28, 28).to(device)
+        data = data.to(device)
         target = target.to(device)
         output = model(data)
         test_loss += criterion(output, target).item()
@@ -83,14 +81,28 @@ with torch.no_grad():
 
 test_loss /= len(test_dataloader.dataset)
 print(f'Test Loss: {test_loss:.4f}, Test Accuracy: {correct}/{len(test_dataloader.dataset)} ({100. * correct / len(test_dataloader.dataset):.0f}%)')
-
-# ... (您之前的代码)
-
-# 将模型转为评估模式
 model.eval()
 
 # 创建一个假的输入张量以表示模型的输入
-dummy_input = torch.randn(1, 1, 28, 28).to(device)
+dummy_input = torch.randn(1, 28, 28).to(device)  # 这里的形状应该是正确的
 
-# 使用 torch.onnx 导出模型
-torch.onnx.export(model, dummy_input, "mnist_model.onnx")
+# 使用 torch.onnx 导出模型，并指定动态轴
+torch.onnx.export(
+    model,
+    dummy_input,
+    "mnist_model.onnx",
+    input_names=["input"],		# 输入名
+    output_names=["output"],	# 输出名
+    dynamic_axes={
+        'input': {0: 'batch_size'},  # 'input' 和 'output' 是你模型的输入/输出名称
+        'output': {0: 'batch_size'}  # 如果你的模型有不同的名称，请更新这些
+    }
+)
+
+print("Model saved as mnist_model.onnx")
+
+# 删除临时模型文件（如果你创建了一个）
+temp_model_path = "temp_model.onnx"
+if os.path.exists(temp_model_path):
+    os.remove(temp_model_path)
+    print(f"Temporary model file {temp_model_path} deleted.")
