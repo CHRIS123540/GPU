@@ -5,9 +5,10 @@ import time  # 导入time模块
 
 # 加载 ONNX 模型
 ort_session = onnxruntime.InferenceSession("./model/model.onnx")
-
 # 指定使用GPU 2进行推理
 ort_session.set_providers(['CUDAExecutionProvider'], [{'device_id': 0}])
+
+
 
 def infer_model(x_test):
     # 定义输入数据
