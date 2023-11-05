@@ -1,9 +1,55 @@
-<mxfile host="app.diagrams.net" modified="2023-11-04T17:23:24.853Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="22.0.8" etag="mMiBUFnJAJif_pjgTjtJ" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-05T01:22:10.484Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="welnjI2K1Tc9Cejpjwtu" version="22.0.8" type="github">
   <diagram name="第 1 页" id="jEvC0ByyU-1uWAN3risS">
-    <mxGraphModel>
+    <mxGraphModel dx="1221" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="FAetLAa5L65gujFV_FN--14" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="277" y="277.5" width="243" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;fontFamily=Times New Roman;fontStyle=3" edge="1" parent="FAetLAa5L65gujFV_FN--14" source="FAetLAa5L65gujFV_FN--17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="186.07675414516302" y="55" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;fontFamily=Times New Roman;fontStyle=3" edge="1" parent="FAetLAa5L65gujFV_FN--14" source="FAetLAa5L65gujFV_FN--17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="29.537828044361603" y="55" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--17" value="动态适应" style="icon;html=1;image=img/clipart/Gear_128x128.png;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="82.90337103327111" width="53.36554298890961" height="47.14285714285714" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--18" value="生产者" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;dashed=1;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry y="69.73214285714286" width="106.73108597781922" height="39.285714285714285" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--19" value="&lt;span&gt;&lt;span&gt;&lt;font&gt;消费者&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;gradientColor=none;dashed=1;dashPattern=8 8;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="148.20594337496314" y="68.75" width="75.83524530002944" height="41.25" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--20" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="2.855056549906697" y="75.625" width="240.14494345009325" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--21" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="154.52554714996555" y="79.0625" width="25.278415100009816" height="20.625" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--22" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="192.4431697999803" y="79.0625" width="25.278415100009816" height="20.625" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--23" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="2.855056549906697" y="79.0625" width="25.278415100009816" height="20.625" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--24" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="40.77267919992144" y="79.0625" width="25.278415100009816" height="20.625" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--25" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;container=0;fontFamily=Times New Roman;fontStyle=3" vertex="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry x="78.69030184993613" y="79.0625" width="25.278415100009816" height="20.625" as="geometry" />
+        </mxCell>
+        <mxCell id="FAetLAa5L65gujFV_FN--26" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=5.517241379310345;endSize=4.103448275862069;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" edge="1" parent="FAetLAa5L65gujFV_FN--14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="108.25200395300318" y="89.10785714285716" as="sourcePoint" />
+            <mxPoint x="146.49730976172174" y="89.10785714285716" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
