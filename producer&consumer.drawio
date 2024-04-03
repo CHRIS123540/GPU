@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-03T15:49:21.870Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="oiPXx5Vxf6IfhUod94Pf" version="24.2.1" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-04-03T15:49:32.825Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="5r_YBkRnDdnDrHPeGBTF" version="24.2.1" type="github" pages="3">
   <diagram name="第 1 页" id="HzuX8MR-6W568-05lvP0">
     <mxGraphModel dx="1221" dy="725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -961,23 +961,6 @@
             <mxPoint x="560" y="370" as="sourcePoint" />
             <mxPoint x="610" y="320" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="nQF5a_oW-3lVA9NtZ9Wb" name="第 5 页">
-    <mxGraphModel dx="4070" dy="2417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="JBRGL64XryT3TS075OFb-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="520" y="190" width="180" height="330" as="geometry" />
-        </mxCell>
-        <mxCell id="JBRGL64XryT3TS075OFb-2" value="FlowManager" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="540" y="210" width="140" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="JBRGL64XryT3TS075OFb-3" value="GPUFE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="540" y="370" width="140" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
