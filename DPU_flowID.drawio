@@ -353,31 +353,34 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="PI4Ir8Enhc0RbVuxar_G-109" value="&lt;b&gt;Host&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=right;" parent="1" vertex="1">
-          <mxGeometry x="110" y="190" width="290" height="130" as="geometry" />
+          <mxGeometry x="120" y="200" width="280" height="120" as="geometry" />
         </mxCell>
         <mxCell id="PI4Ir8Enhc0RbVuxar_G-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="PI4Ir8Enhc0RbVuxar_G-110" target="PI4Ir8Enhc0RbVuxar_G-111" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PI4Ir8Enhc0RbVuxar_G-110" value="VM" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="110" y="120" width="60" height="40" as="geometry" />
+          <mxGeometry x="120" y="130" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PI4Ir8Enhc0RbVuxar_G-111" value="KVM" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="140" y="210" width="80" height="40" as="geometry" />
+          <mxGeometry x="150" y="210" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PI4Ir8Enhc0RbVuxar_G-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="PI4Ir8Enhc0RbVuxar_G-112" target="PI4Ir8Enhc0RbVuxar_G-111" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PI4Ir8Enhc0RbVuxar_G-112" value="VM" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="190" y="120" width="60" height="40" as="geometry" />
+          <mxGeometry x="200" y="130" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PI4Ir8Enhc0RbVuxar_G-118" value="APP" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="140" y="270" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="PI4Ir8Enhc0RbVuxar_G-120" value="&lt;b&gt;DPU&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=right;" parent="1" vertex="1">
-          <mxGeometry x="114" y="390" width="300" height="80" as="geometry" />
+          <mxGeometry x="150" y="270" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="4G7g1Zb0xZ01jj6VBZf4-1" value="ML Flow Classification" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="250" y="210" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dqXK0liOEmXWPxoUVD-N-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="340" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dqXK0liOEmXWPxoUVD-N-3" value="Memery&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22KVM%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22150%22%20y%3D%22210%22%20width%3D%2280%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="347.5" width="60" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
