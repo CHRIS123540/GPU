@@ -530,7 +530,7 @@
             <mxPoint x="250" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="453AQRy6OsXWJArtvf7y-15" value="" style="group;rotation=-90;" vertex="1" connectable="0" parent="1">
+        <mxCell id="453AQRy6OsXWJArtvf7y-15" value="" style="group;rotation=-90;fontFamily=Times New Roman;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="280" y="490" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="453AQRy6OsXWJArtvf7y-11" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=light-dark(#000000, #959595);fontFamily=Times New Roman;rotation=-90;" vertex="1" parent="453AQRy6OsXWJArtvf7y-15">
