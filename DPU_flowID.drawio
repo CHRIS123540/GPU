@@ -548,13 +548,13 @@
             <mxPoint x="250" y="490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XuMl7mQKPTt508YYddLm-1" value="Network Package" style="text;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=Times New Roman;container=0;" vertex="1" parent="1">
+        <mxCell id="XuMl7mQKPTt508YYddLm-1" value="Network Package" style="text;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fontStyle=0;fontFamily=Times New Roman;container=0;" vertex="1" parent="1">
           <mxGeometry x="330" y="459.9999999999999" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XuMl7mQKPTt508YYddLm-2" value="Input Construction" style="text;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=Times New Roman;container=0;" vertex="1" parent="1">
+        <mxCell id="XuMl7mQKPTt508YYddLm-2" value="Input Construction" style="text;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fontStyle=0;fontFamily=Times New Roman;container=0;" vertex="1" parent="1">
           <mxGeometry x="330" y="479.9999999999999" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XuMl7mQKPTt508YYddLm-3" value="List" style="text;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=Times New Roman;container=0;" vertex="1" parent="1">
+        <mxCell id="XuMl7mQKPTt508YYddLm-3" value="List" style="text;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fontStyle=0;fontFamily=Times New Roman;container=0;" vertex="1" parent="1">
           <mxGeometry x="330" y="509.9999999999999" width="120" height="20" as="geometry" />
         </mxCell>
       </root>
